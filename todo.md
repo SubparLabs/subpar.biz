@@ -5,7 +5,7 @@
 - [x] get more money from tom
 - [ ] write bylaws
 - [ ] write marketing copy 
-- [ ] make marketing homepage
+- [x] make marketing homepage
 - [x] recruit new employees (welcome moth & shoj & aweeh & goud & j)
 - [x] expand social media presence
 - [ ] get money from vadim
