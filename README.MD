@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/dvdokkum/subpar.svg?branch=master)](https://travis-ci.org/dvdokkum/subpar)
+[![Build Status](https://travis-ci.org/SubparLabs/subpar.biz.svg?branch=master)](https://travis-ci.org/SubparLabs)
 
 # subpar
 
