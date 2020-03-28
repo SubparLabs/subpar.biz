@@ -11,6 +11,14 @@ export default () => (
         Join us.
       </a>
       <a href="https://twitter.com/subparr">Follow us.</a>
+      <a href="/about">About us.</a>
     </main>
+    <style jsx>
+      {`
+        a {
+          display: block;
+        }
+      `}
+    </style>
   </>
 );
