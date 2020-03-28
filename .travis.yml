@@ -1,10 +1,15 @@
-language: python
-python:
-- '2.6'
-install:
-- gem install mdl
-script:
-- mdl *.md
-notifications:
-  slack:
-    secure: l0ZG0uGz9jGg3gD4HMrUsiAYstD2x4cXnUMqPbnOsmeZEAnW4wbFplf6QulsIYLuKZDwMCOMr/9OLxGjizcDgdenjVxj90T1LgHWNpnZuBFANIW7GenXaC7haZmvXGW1SEYipM0yDBf3iEfUAE4bNfkSD/GE5IUIKwnq+nA+AVfAZ+cMbk42qi2pL/kbWIkY+S8l5kFdPf9jKiNOLTHveDhwkadrsD4u2iwU0/qupYjeunJ2V2GzeBelSf1mB7o7dDq1+Bwfdv28ggyRePU1ihsAAlMD/NDRgiHAQZfY//H5vDX7z+KYg9fweByexyNFEL7rCKFlsj9Nk7YZ5lI1OGcrpyUUVNy44wvliMrLq7G7tW+c4EX0asTIBHtSWZmpxTuFMuWoZ3ODHG+D0yHmy0r901ZNrl1pxWMWYvsUORC4QX4ldQ/iHO9g2RrA96epz7EQPCTrAvEAwH7hR8xg17PYltgZIfU7Dnh/XxWkXCb3wEYgTU6hXLb6aYqFCmtHDZU460Njm+cacZL5h9sc2Yc5et3lR7kY4zsHh5wCTRpOPRrzJGjbsyAsQpSIf9229AdzjfeR8gsZjFJR0+DMAuH2jCWv4yYDiDUStbRizTXoyxYKAsnizBji/cQK4ik0IdZ4iUmkVdoXn/Ejt4OKSV7DinffwcL6tkRcA4Rkghk=
+if: type = pull_request OR branch = master
+
+language: node_js
+node_js: '12'
+
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: npm run deploy
+  on:
+    branch: master
+
+# notifications:
+  # slack:
+    # secure: l0ZG0uGz9jGg3gD4HMrUsiAYstD2x4cXnUMqPbnOsmeZEAnW4wbFplf6QulsIYLuKZDwMCOMr/9OLxGjizcDgdenjVxj90T1LgHWNpnZuBFANIW7GenXaC7haZmvXGW1SEYipM0yDBf3iEfUAE4bNfkSD/GE5IUIKwnq+nA+AVfAZ+cMbk42qi2pL/kbWIkY+S8l5kFdPf9jKiNOLTHveDhwkadrsD4u2iwU0/qupYjeunJ2V2GzeBelSf1mB7o7dDq1+Bwfdv28ggyRePU1ihsAAlMD/NDRgiHAQZfY//H5vDX7z+KYg9fweByexyNFEL7rCKFlsj9Nk7YZ5lI1OGcrpyUUVNy44wvliMrLq7G7tW+c4EX0asTIBHtSWZmpxTuFMuWoZ3ODHG+D0yHmy0r901ZNrl1pxWMWYvsUORC4QX4ldQ/iHO9g2RrA96epz7EQPCTrAvEAwH7hR8xg17PYltgZIfU7Dnh/XxWkXCb3wEYgTU6hXLb6aYqFCmtHDZU460Njm+cacZL5h9sc2Yc5et3lR7kY4zsHh5wCTRpOPRrzJGjbsyAsQpSIf9229AdzjfeR8gsZjFJR0+DMAuH2jCWv4yYDiDUStbRizTXoyxYKAsnizBji/cQK4ik0IdZ4iUmkVdoXn/Ejt4OKSV7DinffwcL6tkRcA4Rkghk=
